@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #698f3f;
+  --secondaryColor: #fca311;
+  --mainDark: #3a3e3b;
+  --mainWhite: #fff;
+  --mainGrey: #e5e5e5;
+  --slantedText: "Grand Hotel", cursive;
+  --mainTransition: all 0.3s linear;
+  --letterSpacing: 0.5rem;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-family: "Catamaran", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+.text-white {
+  color: var(--mainWhite);
+}
+.text-center {
+  text-align: center;
+}
+.text-primary {
+  color: var(--primaryColor);
+}
+nav {
+  position: absolute;
+  scale: 3;
+  top: 5%;
+  left: 5%;
+}
+.hero {
+  --wrap-width: 388px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/main-bcg.jpeg") center/cover no-repeat fixed;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  & h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: var(--letterSpacing);
+    max-width: var(--wrap-width);
+  }
+  & p {
+    font-family: var(--slantedText);
+    font-size: 2rem;
+    letter-spacing: var(--letterSpacing);
+    max-width: var(--wrap-width);
+  }
+}

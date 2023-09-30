@@ -1,0 +1,47 @@
+:root {
+  --green: rgb(13, 255, 146);
+}
+body {
+  background-color: rgb(41, 41, 41);
+  color: rgb(186, 182, 182);
+  display: flex;
+  flex-direction: column;
+  /* gap: 30px; */
+}
+label {
+  border-bottom: 0.5px solid rgb(98, 98, 98);
+  padding-block: 1.25em;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  transition: color 200ms ease;
+  cursor: pointer;
+}
+label:hover {
+  color: white;
+}
+input {
+  transition: background-color 300ms ease, border-color 200ms;
+  margin-inline: 1em;
+  margin-block: auto;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 2.8px;
+  background-clip: content-box;
+  border: 2px solid gray;
+  border-radius: 50%;
+}
+input:hover {
+  border-color: white;
+}
+input:checked {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+label:has(input:checked) {
+  color: var(--green);
+}
