@@ -11,6 +11,7 @@
     <h1>Popup/Modal Windows</h1>
     <div class="box">
       <button id="toggleModal">click on me</button>
+      <div class="backdrop"></div>
       <div class="popup">
         <button id="closeModal">
           <i class="fa fa-close"></i>
@@ -24,15 +25,27 @@
     <script>
       const toggleBtn=document.querySelector('#toggleModal')
      const popup=document.querySelector('.popup')
+     const backdrop=document.querySelector('.backdrop')
+     const closeBtn=document.querySelector('#closeModal')
+
+
       toggleBtn.addEventListener('click',function () {
-        popup.classList.toggle('scale')
-        
+        popup.classList.add('scale')
+     backdrop.classList.add('scale')
       })
-      const closeBtn=document.querySelector('#closeModal')
+
+      
       closeBtn.addEventListener('click',function () {
-        popup.classList.toggle('scale')
+        popup.classList.remove('scale')
+     backdrop.classList.remove('scale')
         
       })
+
+     backdrop.addEventListener('click',function () {
+      popup.classList.remove('scale')
+     backdrop.classList.remove('scale')
+     })
+
     </script>
   </body>
 </html>

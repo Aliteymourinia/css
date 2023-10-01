@@ -6,13 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tea Station || Home</title>
     <!-- font-awesome -->
-    <link rel="stylesheet" href="./fontawesome-free-5.7.2-web/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <!-- custom css -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <nav class="text-primary">
-      <i class="fas fa-bars"></i>
+      <div class="tes">
+        <i class="fas fa-bars" id="humberger"></i>
+      </div>
+
+      <div class="Navitems">
+        <span class="nav-close" id="nav-close"> </span>
+        <i class="fa fa-times" id="closetoggle"></i>
+        <ul>
+          <li>HOME</li>
+          <li>SKILLS</li>
+          <li>ABOUT</li>
+          <li>PRODUCTS</li>
+        </ul>
+      </div>
     </nav>
     <section class="hero text-center">
       <p class="text-primary">over one hundred flavors of tea</p>
