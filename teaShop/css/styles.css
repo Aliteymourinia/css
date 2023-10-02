@@ -21,6 +21,10 @@ html {
 body {
   height: 100%;
 }
+img {
+  display: block;
+  width: 100%;
+}
 
 a {
   text-decoration: none;
@@ -45,19 +49,45 @@ a {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  & h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: var(--letterSpacing);
-    max-width: var(--wrap-width);
-  }
+
   & p {
     font-family: var(--slantedText);
     font-size: 2rem;
     letter-spacing: var(--letterSpacing);
     max-width: var(--wrap-width);
   }
+  & h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: "Catamaran", sans-serif;
+    font-weight: 700;
+    letter-spacing: var(--letterSpacing);
+    max-width: var(--wrap-width);
+    line-height: 1.4;
+  }
+  & .explore {
+    background-color: var(--primaryColor);
+    color: var(--mainDark);
+    padding: 1.2rem 1.5rem;
+    outline: 4px solid var(--primaryColor);
+    outline-offset: 4px;
+    border: none;
+    letter-spacing: 7px;
+    font-weight: 700;
+
+    &.explore:hover {
+      cursor: pointer;
+    }
+  }
+}
+.gradiant {
+  height: 5px;
+  background: linear-gradient(
+    to left,
+    var(--primaryColor),
+    var(--secondaryColor),
+    var(--primaryColor)
+  );
 }
 #humberger {
   position: fixed;
@@ -96,4 +126,86 @@ a {
 }
 .open {
   transform: translateX(0);
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill {
+  background: var(--mainGrey);
+  padding: 2.5rem;
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  text-align: center;
+
+  & .skill-icon {
+    font-size: 2.5em;
+    color: var(--mainDark);
+    transition: transform 0.5s ease;
+  }
+
+  & .skill-title {
+    font-family: "Catamaran", sans-serif;
+    letter-spacing: var(--letterSpacing);
+    color: var(--primaryColor);
+  }
+
+  &:hover {
+    background-color: var(--primaryColor);
+    transition: 700ms ease;
+
+    .skill-title {
+      color: var(--mainWhite);
+    }
+    .skill-icon {
+      transform: translateY(-5px);
+    }
+  }
+}
+& .skill-text {
+  color: var(--mainDark);
+  font-family: "Catamaran", sans-serif;
+}
+
+.tstation {
+  display: flex;
+  gap: 4em;
+  padding: 5em 2em;
+  & img {
+    max-width: 45%;
+    max-height: 270px;
+    border: solid 10px var(--primaryColor);
+    border-radius: 1em;
+  }
+  & h3 {
+    font-family: "grand hotel", cursive;
+    color: var(--primaryColor);
+    font-size: 32px;
+    letter-spacing: 7px;
+  }
+  & h2 {
+    font-family: "cataraman", sans-serif;
+    font-size: 32px;
+    color: var(--mainDark);
+  }
+  & p {
+    font-family: "catarman", sans-serif;
+    color: var(--mainDark);
+    line-height: 1.7;
+    margin-top: 1.5em;
+  }
+  & a {
+    background-color: var(--primaryColor);
+    color: var(--mainDark);
+    display: inline-block;
+    padding: 0.8em 1em;
+    margin-top: 2em;
+    outline: 4px solid var(--primaryColor) ;
+    outline-offset: 4px;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
 }
