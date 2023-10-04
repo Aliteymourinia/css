@@ -132,8 +132,7 @@ a {
   }
   & li:hover {
     color: var(--mainDark);
-    /* padding: 0.5rem; */
-    transform: translateX(5px);
+    transform: translateX(15px);
     transition: var(--mainTransition);
   }
 }
