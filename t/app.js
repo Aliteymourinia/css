@@ -1,10 +1,9 @@
 const nameEl = document.getElementById("name");
 const lastNameEl = document.getElementById("lastName");
-
-const data = {
-  firstName: "gggd",
-  lastName: "teimory",
-};
-
-nameEl.textContent = data.firstName;
-lastNameEl.textContent = data.temp;
+// const person = {
+//   name: "last",
+//   family: "hey",
+// };
+// const key = "age";
+// person[key] = 20;
+// console.log(person);
