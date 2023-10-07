@@ -1,9 +1,9 @@
-const nameEl = document.getElementById("name");
-const lastNameEl = document.getElementById("lastName");
-// const person = {
-//   name: "last",
-//   family: "hey",
-// };
-// const key = "age";
-// person[key] = 20;
-// console.log(person);
+const input = document.querySelector("input");
+const button = document.querySelector("button");
+
+input.addEventListener("input", function (e) {
+  console.log(e.target.value);
+});
+input.addEventListener(('submit'),()=>{
+  
+});
