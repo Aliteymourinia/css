@@ -8,9 +8,10 @@
 :root {
   --primaryColor: #698f3f;
   --secondaryColor: #fca311;
-  --mainDark: #3a3e3b;
+  --mainDark: #333333;
   --mainWhite: #fff;
   --mainGrey: #e5e5e5;
+  --lightGreen: rgb(41, 177, 41);
   --slantedText: cursive;
   --mainTransition: all 0.3s linear;
   --letterSpacing: 0.5rem;
@@ -54,6 +55,10 @@ a {
   margin-top: 2em;
   font-family: sans-serif;
   font-weight: 600;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--lightGreen);
+  }
 }
 .hero {
   --wrap-width: 388px;
@@ -91,6 +96,7 @@ a {
 
     &.explore:hover {
       cursor: pointer;
+      background-color: var(--lightGreen);
     }
   }
 }
@@ -108,6 +114,7 @@ a {
   z-index: 0;
   padding: 40px;
   transform: scale(3);
+  cursor: pointer;
 }
 .Navitems {
   background-color: var(--mainGrey);
@@ -124,6 +131,7 @@ a {
 
   & #closetoggle {
     color: var(--mainDark);
+    cursor: pointer;
   }
   & li {
     list-style-type: none;
@@ -296,7 +304,7 @@ a {
   }
   .contact {
     flex-direction: column;
-    & h2{
+    & h2 {
       font-size: 1.6rem;
     }
     & form,
