@@ -1,7 +1,12 @@
-
 body {
   background: #3a3737;
   margin: 0;
+}
+h1 {
+  color: red;
+  text-transform: capitalize;
+  position: fixed;
+  left: 9em;
 }
 button {
   all: unset;
@@ -9,21 +14,22 @@ button {
   padding: 1em;
   overflow: hidden;
   position: absolute;
+  top: 0;
   z-index: 1;
 }
 button div {
   background: #afaeae;
-  width: 15px;
-  height: 2px;
+  width: 25px;
+  height: 5px;
   border-radius: 2px;
-  margin-block: 2px;
+  margin-block: 3px;
   transition: rotate 500ms ease, scale 100ms ease 100ms;
   transform-origin: 0 5%;
 }
 
 .open > div:nth-child(1) {
   rotate: 45deg;
-  transform-origin: 10% 0%;
+  transform-origin: 0% 0%;
 }
 .open > div:nth-child(2) {
   scale: 0%;
@@ -44,7 +50,7 @@ ul {
   background: whitesmoke;
   list-style-type: none;
   color: rgb(15, 15, 15);
-  padding: 1.5em;
+  padding: 2.5em;
 }
 li {
   padding: 10px;
@@ -52,7 +58,7 @@ li {
   font-size: 13px;
 }
 li:hover {
-  color: #bc721f;
+  color: rgb(246, 12, 12);
   cursor: pointer;
 }
 @media (600px< width) {
@@ -62,8 +68,14 @@ li:hover {
   nav {
     translate: 0px;
   }
-  ul{
+  ul {
     display: flex;
     justify-content: space-around;
+  }
+}
+@media (600px> width) {
+  h1 {
+    display: none;
+    
   }
 }
